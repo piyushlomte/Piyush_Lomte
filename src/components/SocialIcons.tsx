@@ -75,7 +75,7 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com/piyushlomte__/" target="_blank">
+          <a href="https://www.instagram.com/piyush_lomte8308_/?utm_source=ig_web_button_share_sheet" target="_blank">
             <FaInstagram />
           </a>
         </span>
