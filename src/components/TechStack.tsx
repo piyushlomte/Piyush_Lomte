@@ -13,21 +13,45 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
+  // Programming Languages
+  "/images/javascript.webp",
+  "/images/python.webp",
+  "/images/c_lang.webp",
+  "/images/typescript.webp",
+  // Frontend Technologies
   "/images/react2.webp",
   "/images/next2.webp",
+  "/images/html5.webp",
+  "/images/css3.webp",
+  "/images/tailwind.webp",
+  "/images/vite.webp",
+  // Backend Technologies
   "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
+  // Databases
+  "/images/postgresql.webp",
   "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/supabase.webp",
+  // AI / Gen AI
+  "/images/openai.webp",
+  "/images/gemini.webp",
+  // IoT & Embedded Systems
+  "/images/arduino.webp",
+  "/images/esp32.webp",
+  // SEO & Analytics
+  "/images/analytics.webp",
+  // Tools & Platforms
+  "/images/github.webp",
+  "/images/vscode.webp",
+  "/images/figma.webp",
+  "/images/canva.webp",
+  "/images/vercel.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
-  scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+const spheres = [...Array(32)].map(() => ({
+  scale: [0.75, 0.9, 0.85, 1, 0.95][Math.floor(Math.random() * 5)],
 }));
 
 type SphereProps = {
@@ -200,7 +224,7 @@ const TechStack = () => {
             <SphereGeo
               key={i}
               {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              material={materials[i % materials.length]}
               isActive={isActive}
             />
           ))}
