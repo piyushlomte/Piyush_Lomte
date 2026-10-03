@@ -1,0 +1,453 @@
+.activities-certs-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  background-color: var(--backgroundColor, #0c0c0c);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.activities-certs-container {
+  margin: 0 auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* Centered Header Section matching My Education & Qualification style */
+.activities-header.centered-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 50px auto;
+}
+
+.activities-header h2 {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 400;
+  text-align: center;
+  background: linear-gradient(0deg, #7f40ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+  letter-spacing: normal;
+  width: 100%;
+}
+
+.activities-header h2 > span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+/* 3D Transparent Solid Glass Cylinder Viewport (Refined Compact Height) */
+.cylinder-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  height: 275px;
+  perspective: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  box-sizing: border-box;
+}
+
+.cylinder-viewport:active {
+  cursor: grabbing;
+}
+
+/* Glass Cylinder Stage Outline & Glowing Effects */
+.glass-cylinder-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.glass-cylinder-top-ring,
+.glass-cylinder-bottom-ring {
+  position: absolute;
+  width: 410px;
+  height: 105px;
+  border-radius: 50%;
+  border: 1px solid rgba(128, 118, 235, 0.25);
+  box-shadow: 0 0 18px rgba(128, 118, 235, 0.15), inset 0 0 14px rgba(128, 118, 235, 0.1);
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.glass-cylinder-top-ring {
+  top: 5px;
+  transform: rotateX(75deg);
+  background: radial-gradient(ellipse at center, rgba(128, 118, 235, 0.05) 0%, transparent 70%);
+}
+
+.glass-cylinder-bottom-ring {
+  bottom: 5px;
+  transform: rotateX(75deg);
+  background: radial-gradient(ellipse at center, rgba(128, 118, 235, 0.08) 0%, transparent 70%);
+}
+
+.glass-cylinder-glow {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: radial-gradient(circle, rgba(128, 118, 235, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Rotatable 3D Cylinder Ring (Refined Compact: 170px width x 198px height) */
+.cylinder-ring {
+  position: relative;
+  width: 170px;
+  height: 198px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  margin: 0 auto;
+}
+
+/* Cylinder Cards attached to 3D Cylinder Perimeter */
+.cylinder-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 198px;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  transform-style: preserve-3d;
+  transition: z-index 0.3s ease;
+  cursor: pointer;
+}
+
+.cylinder-card:hover {
+  z-index: 100;
+}
+
+.card-glass-body {
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 24, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 11px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.55), 0 0 10px rgba(128, 118, 235, 0.12);
+  backdrop-filter: blur(16px);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+}
+
+/* Hover preview zoom */
+.cylinder-card:hover .card-glass-body {
+  border-color: rgba(128, 118, 235, 0.7);
+  box-shadow: 0 12px 30px rgba(128, 118, 235, 0.4), 0 0 18px rgba(128, 118, 235, 0.3);
+  transform: scale(1.1);
+}
+
+/* Image Wrapper (Reduced to 108px height) */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 108px;
+  overflow: hidden;
+  background-color: #121216;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cylinder-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Card Content Details */
+.card-content {
+  padding: 7px 9px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 3px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9.5px;
+  color: #adacac;
+}
+
+.card-org {
+  color: var(--accentColor, #8076eb);
+  font-weight: 500;
+}
+
+.card-date {
+  font-size: 8.5px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Carousel Container flanking cylinder with side arrow buttons */
+.cylinder-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Floating Navigation Buttons placed beside cylinder */
+.cylinder-nav-btn {
+  position: relative;
+  flex-shrink: 0;
+  background: rgba(20, 20, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.cylinder-nav-btn:hover {
+  background: var(--accentColor, #8076eb);
+  border-color: var(--accentColor, #8076eb);
+  transform: scale(1.12);
+  box-shadow: 0 4px 20px rgba(128, 118, 235, 0.55);
+}
+
+.cylinder-nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* Scoped Overlay confined strictly to section container with MAXIMIZED Image Size */
+.fullscreen-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 500;
+  background: rgba(12, 12, 16, 0.95);
+  backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: overlayFadeIn 0.3s ease;
+  box-sizing: border-box;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fullscreen-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  max-height: 94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: zoomTakeWholeScreen 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes zoomTakeWholeScreen {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Clicked Image: Maximized size filling available screen space */
+.fullscreen-image {
+  max-width: 95%;
+  max-height: 72vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95), 0 0 50px rgba(128, 118, 235, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.fullscreen-caption {
+  margin-top: 14px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.fullscreen-caption h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+.fullscreen-caption p {
+  font-size: 14px;
+  color: var(--accentColor, #8076eb);
+  margin: 0;
+  font-weight: 500;
+}
+
+.fullscreen-caption .fullscreen-description {
+  font-size: 13px;
+  color: #d8d8d8;
+  margin: 8px auto 0 auto;
+  max-width: 650px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.fullscreen-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.fullscreen-close-btn:hover {
+  background: var(--accentColor, #8076eb);
+  border-color: var(--accentColor, #8076eb);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media only screen and (max-width: 1400px) {
+  .activities-header h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cylinder-viewport {
+    height: 255px;
+  }
+  .glass-cylinder-top-ring,
+  .glass-cylinder-bottom-ring {
+    width: 360px;
+    height: 95px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .activities-certs-section {
+    padding: 30px 0;
+  }
+  .activities-header h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .activities-header.centered-header {
+    margin-bottom: 18px;
+  }
+  .cylinder-viewport {
+    height: 225px;
+  }
+  .cylinder-ring,
+  .cylinder-card {
+    width: 145px;
+    height: 170px;
+  }
+  .card-image-wrapper {
+    height: 90px;
+  }
+  .card-content {
+    padding: 6px 8px;
+    gap: 2px;
+  }
+  .card-title {
+    font-size: 10px;
+  }
+  .glass-cylinder-top-ring,
+  .glass-cylinder-bottom-ring {
+    width: 260px;
+    height: 75px;
+  }
+  .cylinder-carousel-container {
+    gap: 8px;
+  }
+  .cylinder-nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+}

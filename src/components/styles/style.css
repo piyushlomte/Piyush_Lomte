@@ -1,0 +1,53 @@
+.hover-link {
+  position: relative;
+  display: inline-flex;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.hover-in {
+  position: relative;
+  transition: transform 0.3s ease;
+  display: block;
+}
+.hover-in span {
+  display: block;
+}
+.hover-in div {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+}
+.hover-link:hover .hover-in {
+  transform: translateY(-100%);
+  color: var(--accentColor);
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#smooth-content {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.character-model,
+.landing-circle1,
+.landing-circle2,
+.activities-certs-cylinder {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
