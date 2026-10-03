@@ -1,65 +1,72 @@
-# My Portfolio Website - Overview 🚀
+# Piyush Lomte — 3D Interactive Portfolio 🚀
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
-
----
-
-## ⚠️ Usage Notice
-
-This project is shared for learning purposes only.
-
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.
-
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
+Welcome to the official repository for my personal 3D interactive portfolio website.  
+Built with cutting-edge web technologies, featuring hardware-accelerated 3D graphics, physics simulations, dynamic typography, and sleek responsive design.
 
 ---
 
-## 🛠️ Instructions
+## 🌟 Highlights & Features
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
-
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
-
----
-
-## ⚙️ Tech Stack
-
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
+- **Interactive 3D Avatar & Canvas**: Real-time 3D character rendering with custom lighting, camera transitions, and post-processing.
+- **Scroll-Linked 3D Cylindrical Showcase**: Interactive rotating 3D glass cylinder exhibiting genuine hackathons, internships, Deloitte job simulations, and community achievements.
+- **Infinite Gliding Work & Projects**: Smooth continuous showcase of flagship projects (HealthQ, InternBridge AI, Chikitsa Smart, SEQA Audit Checklist Manager).
+- **Physics Tech Stack**: Interactive 3D rigid-body physics simulation using Rapier & React Three Fiber.
+- **Hardware-Accelerated Smooth Scrolling**: Powered by GSAP ScrollTrigger and ScrollSmoother for fluid 60fps animations.
+- **Responsive & Modern Design**: Dark-mode aesthetic with custom violet-to-white gradients, glassmorphism, and seamless mobile adaptation.
 
 ---
 
-## 🎨 Assets Usage
+## 🛠️ Tech Stack
 
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
+- **Frontend**: React 18, TypeScript, HTML5, Vanilla CSS
+- **3D & Graphics**: Three.js, React Three Fiber (`@react-three/fiber`), Drei (`@react-three/drei`), Rapier Physics (`@react-three/rapier`)
+- **Animations & Scrolling**: GSAP (GreenSock), ScrollTrigger, ScrollSmoother, SplitText
+- **Build Tool & Bundler**: Vite, PostCSS
+- **Deployment**: Vercel
 
 ---
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+## 🚀 Getting Started Locally
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommended).
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/piyushlomte/Piyush_Lomte.git
+   cd Piyush_Lomte
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the local development server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📬 Connect with Me
+
+- **Portfolio**: [piyushlomte.github.io](https://piyushlomte.github.io)
+- **LinkedIn**: [linkedin.com/in/piyush-lomte](https://www.linkedin.com/in/piyush-lomte-13b632290/)
+- **GitHub**: [@piyushlomte](https://github.com/piyushlomte)
+- **Email**: [piyushlomte8308@gmail.com](mailto:piyushlomte8308@gmail.com)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.  
+Copyright © 2026 Piyush Lomte.
