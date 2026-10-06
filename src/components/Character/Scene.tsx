@@ -58,9 +58,11 @@ const Scene = () => {
       hoverDivRef.current.appendChild(hoverDiv);
     }
 
-    const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
+    const initialFov = container.width < 600 ? 18 : container.width <= 1024 ? 16 : 14.5;
+    const initialZoom = container.width < 600 ? 1.0 : container.width <= 1024 ? 1.05 : 1.1;
+    const camera = new THREE.PerspectiveCamera(initialFov, aspect, 0.1, 1000);
     camera.position.set(0, 13.1, 24.7);
-    camera.zoom = 1.1;
+    camera.zoom = initialZoom;
     camera.updateProjectionMatrix();
 
     let headBone: THREE.Object3D | null = null;

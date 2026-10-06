@@ -48,7 +48,7 @@ const Contact = () => {
               X <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com/piyush_lomte8308_/?utm_source=ig_web_button_share_sheet"
+              href="https://www.instagram.com/piyushlomte__/"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
